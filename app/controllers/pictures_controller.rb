@@ -9,7 +9,11 @@ class PicturesController < ApplicationController
 	end
 
 	def show
-		@picture = @pictures[0]
+		@picture = @pictures[params[:id].to_i]
+
+		# Tells Rails to skip HTML and just render this text
+		# Params goes to router and looks for this
+		render :text => "Hello world #{params[:id]}"
 	end
 
 	def load_pictures
