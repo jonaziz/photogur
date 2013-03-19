@@ -9,5 +9,7 @@ class PicturesController < ApplicationController
 			'http://cdn4.leftlanenews.com/photos/content/january2013/thumbnails5.0/mercedes-cla45-leak-ri_300.jpg',
 			'http://cdn4.leftlanenews.com/photos/content/january2013/thumbnails5.0/fiskerrestart_300.jpg'
 		]
+		@title = 'Image Source: '
+		
 	end
 end

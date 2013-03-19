@@ -7,11 +7,13 @@
 
 <p><%= @greeting %>
 
+<!-- "-" says run something in ruby, but don't print the result -->
 <%- @pictures.each do |image| %>
 	<div style="margin: 10px 0; padding: 5px; background: #EEE; width: 700px;"
 		<p>
 			<img src="<%= image %>">
 		</p>
-		<h5>Image Source: <%= "#{image}" %></h5>
+		<h5><%= "#{@title}" %><%= image %></h5>
 	</div>
 <% end %>	
+<!-- with = t would print out more than you want -->
