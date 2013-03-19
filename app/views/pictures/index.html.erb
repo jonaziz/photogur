@@ -6,3 +6,12 @@
 <p><%= 1+1 %></p>
 
 <p><%= @greeting %>
+
+<%- @pictures.each do |image| %>
+	<div style="margin: 10px 0; padding: 5px; background: #EEE; width: 700px;"
+		<p>
+			<img src="<%= image %>">
+		</p>
+		<h5>Image Source: <%= "#{image}" %></h5>
+	</div>
+<% end %>	
