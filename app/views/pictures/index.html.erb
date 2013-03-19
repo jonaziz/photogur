@@ -2,18 +2,12 @@
 <!-- Find header, etc. in application.html.erb -->
 <h1>Hello</h1>
 
-<p><%= "Hello from ruby".upcase %></p>
-<p><%= 1+1 %></p>
-
-<p><%= @greeting %>
-
 <!-- "-" says run something in ruby, but don't print the result -->
-<%- @pictures.each do |image| %>
-	<div style="margin: 10px 0; padding: 5px; background: #EEE; width: 700px;"
+<%- @pictures.each do |picture| %>
+		<h3><%= picture[:title] %></h3>
+		<h4><%= picture[:artist] %></h5>
 		<p>
-			<img src="<%= image %>">
+			<img src="<%= picture[:url] %>">
 		</p>
-		<h5><%= "#{@title}" %><%= image %></h5>
-	</div>
 <% end %>	
 <!-- with = t would print out more than you want -->
