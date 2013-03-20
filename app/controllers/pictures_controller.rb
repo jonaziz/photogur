@@ -8,6 +8,10 @@ class PicturesController < ApplicationController
 	def index
 	end
 
+	def new
+		
+	end
+
 	def show
 		@picture = @pictures[params[:id].to_i]
 

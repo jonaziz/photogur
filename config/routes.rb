@@ -1,7 +1,12 @@
 Photogur::Application.routes.draw do
   
   get 'pictures' => 'pictures#index'
+
+  get 'pictures/new' => 'pictures#new'
+
   get 'pictures/:id' => 'pictures#show'
+
+
   # grabs anything after the slash and labels it as id
   # can pass in multiple parameters /:id/:word etc.
 
