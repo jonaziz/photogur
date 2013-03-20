@@ -13,7 +13,7 @@ class PicturesController < ApplicationController
 
 		# Tells Rails to skip HTML and just render this text
 		# Params goes to router and looks for this
-		render :text => "Hello world #{params[:id]}"
+		#render :text => "Hello world #{params[:id]}"
 	end
 
 	def load_pictures
