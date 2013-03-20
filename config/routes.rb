@@ -1,5 +1,9 @@
 Photogur::Application.routes.draw do
   
+  # Post vs. Gets
+  # Post sends infromation to the server instead of just getting
+  # information.  
+
   get 'pictures' => 'pictures#index'
 
   get 'pictures/new' => 'pictures#new'
