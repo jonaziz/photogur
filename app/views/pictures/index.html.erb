@@ -4,10 +4,10 @@
 
 <!-- "-" says run something in ruby, but don't print the result -->
 <%- @pictures.each do |picture| %>
-		<h3><%= picture[:title] %></h3>
-		<h4><%= picture[:artist] %></h5>
+		<h3><%= picture.title %></h3>
+		<h4><%= picture.artist %></h5>
 		<p>
-			<img src="<%= picture[:url] %>">
+			<img src="<%= picture.url %>">
 		</p>
 <% end %>	
 <!-- with = t would print out more than you want -->

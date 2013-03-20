@@ -1,8 +1,10 @@
 <h1>Add a picture</h1>
 
+<!-- This line is important as it describes what happens: action is /pictures (route) and method is POST (send data via params). -->
 <form action="/pictures" method="POST">
 	<p>
 		<label>Artist</label><br>
+		<!-- Note the use of artist matching up with params call -->
 		<input type="text" name="artist"/>
 	</p>
 	<p>
