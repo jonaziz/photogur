@@ -10,6 +10,6 @@ class Picture < ActiveRecord::Base
   # Can whitelist attributes for mass-assignment by adding to
   # list as in below example. Note: different from attr_accessor
 
-  attr_accessible :tile, :artist
+  attr_accessible :title, :artist, :url
 
 end

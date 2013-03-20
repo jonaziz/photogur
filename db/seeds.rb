@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Emanuel', :city => cities.first)
+
+Picture.create(:artist => 'Sergey Ershov', :title => "The old church on the coast of White sea", :url => "http://monicao.s3.amazonaws.com/bitmaker/house.jpg")
+Picture.create(:artist => 'Stephen Scullion', :title => "Sea Power", :url => "http://monicao.s3.amazonaws.com/bitmaker/wave.jpg")
+Picture.create(:artist => 'John Wilhelm', :title => "Into the Poppies", :url => "http://monicao.s3.amazonaws.com/bitmaker/girl.jpg")

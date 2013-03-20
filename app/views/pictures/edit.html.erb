@@ -1,0 +1,22 @@
+<h1>Edit picture (ID <%= @picture.id %>)</h1>
+
+<form action="/pictures/<%= @picture.id %>" method="POST">
+	<p>
+		<label>Artist</label><br>
+		<!-- Note the use of artist matching up with params call -->
+		<input type="text" name="artist" value="<%= @picture.artist %>"/>
+	</p>
+	<p>
+		<label>Title</label><br>
+		<input type="text" name="title" value="<%= @picture.title %>"/>
+	</p>
+	<p>
+		<label>URL</label><br>
+		<input type="text" name="url" value="<%= @picture.url %>"/>
+	</p>
+	<p>
+		<input type="submit" value="Save"/>
+	</p>
+</form>
+
+<a href="/pictures/">Return Home</a> | <a href="/pictures/<%= params[:id] %>/">View Image</a>

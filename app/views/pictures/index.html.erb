@@ -7,7 +7,9 @@
 		<h3><%= picture.title %></h3>
 		<h4><%= picture.artist %></h5>
 		<p>
-			<img src="<%= picture.url %>">
+			<img src="<%= picture.url %>"> <br>
+
+			<a href="/pictures/<%= picture.id %>">View Photo</a> | <a href="/pictures/<%= picture.id %>/edit">Edit</a>
 		</p>
 <% end %>	
 <!-- with = t would print out more than you want -->
