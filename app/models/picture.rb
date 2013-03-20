@@ -7,4 +7,9 @@ class Picture < ActiveRecord::Base
   # Also created an id. All models need some kind of id. Rails
   # made a number column automatically.
 
+  # Can whitelist attributes for mass-assignment by adding to
+  # list as in below example. Note: different from attr_accessor
+
+  attr_accessible :tile, :artist
+
 end

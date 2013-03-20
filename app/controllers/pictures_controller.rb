@@ -48,12 +48,18 @@ class PicturesController < ApplicationController
 		# Tells Rails to skip HTML and just render this text
 		# Params goes to router and looks for this
 		# render :text => "Hello world #{params[:id]}"
+
+		# Some more on search:
+		# Picture.where({:artist => "Zoe"}) => return array
+		# Multiple matches possible, empty array (no matches)
+		# also possible.
 	end
 
 	# def load_pictures
 	# 	# This return is a collection (Array) of pictures, not
 	# 	# hashes.
 	# 	# @pictures = Picture.all
+	#   # This is a collection of hashes.
 	# 	# @pictures = [
 	#  #      {
 	#  #        :title  => "The old church on the coast of White sea",
