@@ -1,23 +1,33 @@
 <h1>Add a picture</h1>
 
 <!-- This line is important as it describes what happens: action is /pictures (route) and method is POST (send data via params). -->
-<form action="/pictures" method="POST">
+
+
+<!-- <form action="/pictures" method="POST"> -->
+
+<!-- method taking one parameter and block -->
+<%= form_tag "/pictures" do %>
 	<p>
 		<label>Artist</label><br>
 		<!-- Note the use of artist matching up with params call -->
-		<input type="text" name="artist"/>
+		<!-- <input type="text" name="artist"/> -->
+		<%= text_field_tag "artist" %>
 	</p>
 	<p>
-		<label>Title</label><br>
-		<input type="text" name="title"/>
+		<label>Title</label><br><!-- 
+		<input type="text" name="title"/> -->
+		<%= text_field_tag "title" %>
 	</p>
 	<p>
 		<label>URL</label><br>
-		<input type="text" name="url"/>
+		<!-- <input type="text" name="url"/> -->
+		<%= text_field_tag "url" %>
 	</p>
 	<p>
 		<input type="submit"/>
 	</p>
-</form>
+
+<% end %>
+<!-- </form> -->
 
 <a href="/pictures/">Return Home</a>
