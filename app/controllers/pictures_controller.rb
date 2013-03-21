@@ -42,6 +42,16 @@ class PicturesController < ApplicationController
 		end
 	end
 
+	def destroy
+		@picture = Picture.find params[:id]
+
+		if @picture.destroy
+			redirect_to pictures_path
+		else
+			redirect_to @picture
+		end
+	end
+
 end
 
 # params looks like = {

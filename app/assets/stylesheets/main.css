@@ -1,0 +1,102 @@
+body {
+	margin:0;
+	padding:0;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.header {
+	margin: 15px 0;
+	padding: 10px 40px;
+	display: block;
+	background: #D0D0D0;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #EEE;
+}
+
+.header h1 {
+	float: left;
+}
+
+h1 {
+	display: block;
+	width: 500px;
+}
+
+h2 {
+	margin: 4px 0;
+}
+
+h4 {
+	margin: 4px 0;
+	color: #777;
+}
+
+nav {
+	background: black;
+	padding: 5px 10px;
+	text-align: right;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 12px;
+}
+
+#new-link {
+	float: right;
+	margin: 26px 10px;
+}
+
+#new-link a {
+	padding: 5px 8px;
+	background: #666;
+	border: 2px solid #888;
+	border-radius: 4px;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.clear {
+	clear:both;
+}
+
+.display {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.photo-nav {
+	background: #F5F5F5;
+	text-align: right;
+	padding: 5px;
+}
+
+.photo-nav a{
+	text-decoration: none;
+	color: #777;
+	margin: 0 0 0 5px;
+}
+
+.escape-nav {
+	background: #EEE;
+	font-size: 12px;
+	padding: 5px;
+	font-weight: bold;
+	margin: 0 0 10px 0;
+}
+
+.escape-nav ul {
+	list-style: none;
+	display: inline
+}
+
+.escape-nav a {
+	margin: 0 5px;
+	float: left;
+	text-decoration: none;
+	color: #888;
+}

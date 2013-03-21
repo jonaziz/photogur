@@ -7,8 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<nav>
+		<%= link_to "Show me a picture!", picture_path(Picture.all.sample)%>
+	</nav>
 
-<%= yield %>
+	<%= yield %>
 
 </body>
 </html>

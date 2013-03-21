@@ -1,3 +1,10 @@
+<div class="escape-nav">
+	<ul>
+		<li><%= link_to "Return Home", pictures_path %></li>
+		<li><%= link_to "View Image", picture_path(@picture) %></li>
+	</ul>
+</div>
+
 <h1>Edit picture (ID <%= @picture.id %>)</h1>
 
 <%= form_for @picture do |f| %>
@@ -15,9 +22,7 @@
 	</p>
 	<p>
 		<%= f.submit "Update" %>
+		<%= button_to "Delete", picture_path(@picture), :method => :delete, :confirm => "Are you sure?" %>
 	</p>
 
 <% end %>
-
-
-<a href="/">Return Home</a> | <a href="<%= picture_path(@picture) %>/">View Image</a>	

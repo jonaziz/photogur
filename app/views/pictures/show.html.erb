@@ -1,5 +1,15 @@
-<h1><%= @picture.title %></h1>
-<h3><%= @picture.artist %></h3>
+<div class="escape-nav">
+	<ul>
+		<li><%= link_to "Return Home", pictures_path %></li>
+		<li><%= link_to "Edit", edit_picture_path(@picture) %></li>
+	</ul>
+</div>
 
-<img src="<%= @picture.url %>"><br>
-<a href="/">Return Home</a> | <a href="<%= edit_picture_path(@picture) %>">Edit</a>
+<div class="display">
+	<h2><%= @picture.title %></h2>
+	<h4><%= @picture.artist %></h4>
+
+	<%= link_to picture_path(@picture) do %>
+		<img src="<%= @picture.url %>">
+	<% end %>
+</div>
