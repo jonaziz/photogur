@@ -1,41 +1,22 @@
 <h1>Add a picture</h1>
 
-<!-- This line is important as it describes what happens: action is /pictures (route) and method is POST (send data via params). -->
-
-
-<!-- <form action="/pictures" method="POST"> -->
-
-<!-- method taking one parameter and block -->
-<!-- Merely an HTML comment doesn't stop ruby from running -->
-<!-- Deleted previous tag due to bug -->
-
-<!-- Rails knows routes -->
-<!-- Looks at picture model and figures out routes -->
-<!-- Will correctly definite actions -->
-<!-- Uses do, but needs a parameter to continue (convention is f) -->
 <%= form_for @picture do |f| %>
 	<p>
-		<label>Title</label><br><!-- 
-		<input type="text" name="title"/> -->
+		<label>Title</label><br>
 		<%= f.text_field "title" %>
 	</p>
 	<p>
 		<label>Artist</label><br>
-		<!-- Note the use of artist matching up with params call -->
-		<!-- <input type="text" name="artist"/> -->
 		<%= f.text_field "artist" %>
 	</p>
 	<p>
 		<label>URL</label><br>
-		<!-- <input type="text" name="url"/> -->
 		<%= f.text_field "url" %>
 	</p>
 	<p>
-		<!-- <input type="submit"/> -->
 		<%= f.submit "Save" %>
 	</p>
 
 <% end %>
-<!-- </form> -->
 
 <a href="/">Return Home</a>
