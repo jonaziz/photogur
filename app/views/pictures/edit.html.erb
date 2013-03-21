@@ -1,21 +1,23 @@
 <h1>Edit picture (ID <%= @picture.id %>)</h1>
 
-<form action="/pictures/<%= @picture.id %>" method="POST">
-	<p>
-		<label>Artist</label><br>
-		<input type="text" name="artist" value="<%= @picture.artist %>"/>
-	</p>
+<%= form_for @picture do |f| %>
 	<p>
 		<label>Title</label><br>
-		<input type="text" name="title" value="<%= @picture.title %>"/>
+		<%= f.text_field "title" %>
+	</p>
+	<p>
+		<label>Artist</label><br>
+		<%= f.text_field "artist" %>
 	</p>
 	<p>
 		<label>URL</label><br>
-		<input type="text" name="url" value="<%= @picture.url %>"/>
+		<%= f.text_field "url" %>
 	</p>
 	<p>
-		<input type="submit" value="Save"/>
+		<%= f.submit "Update" %>
 	</p>
-</form>
 
-<a href="/">Return Home</a> | <a href="/pictures/<%= params[:id] %>/">View Image</a>
+<% end %>
+
+
+<a href="/">Return Home</a> | <a href="<%= picture_path(@picture) %>/">View Image</a>	

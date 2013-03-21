@@ -1,7 +1,5 @@
 class PicturesController < ApplicationController
 
-	# before_filter :load_pictures
-
 	# Most methods inside controllers are called actions
 	## If index is empty, you can completely remove it and Rails will
 	## still work. It knows the index.html exists.
@@ -19,7 +17,7 @@ class PicturesController < ApplicationController
 		# create a new object so it will always be true.
 		@picture = Picture.new(params[:picture])
 		if @picture.save
-			redirect_to pictures_path
+			redirect_to @pictures
 		end
 	end
 
@@ -34,18 +32,26 @@ class PicturesController < ApplicationController
 	def update
 		@picture = Picture.find params[:id]
 
-		success = @picture.update_attributes(
-			:title => params[:title], 
-			:artist => params[:artist], 
-			:url => params[:url]
-		)
-
-		if success
-			redirect_to "/pictures/#{@picture.id}"
-		else
-			#In future will want to show something else
-			redirect_to "/pictures/#{@picture.id}"
+		if @picture.update_attributes(params[:picture])
+			# Named routes (are methods) allow us to navigate app.
+			# Can use just "@picture" without ID.
+			# redirect_to picture_path(@picture.id)
+			redirect_to @picture
+			# We're passing picture and redirect_to method looks for
+			# an ID.
 		end
 	end
 
 end
+
+# params looks like = {
+# 	:id => "4",
+# 	:picture => {
+# 		:title => "Title",
+# 		:url => "http",
+# 		:artist => "Someone"
+# 	}
+# }
+
+# The form "for" picture, recognizes that it should just pass things in
+# a way that the data can be accessed easily.

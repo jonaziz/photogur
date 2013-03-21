@@ -9,7 +9,7 @@
 		<p>
 			<img src="<%= picture.url %>"> <br>
 
-			<a href="/pictures/<%= picture.id %>">View Photo</a> | <a href="/pictures/<%= picture.id %>/edit">Edit</a>
+			<a href="<%= picture_path(picture) %>">View Photo</a> | <a href="<%= edit_picture_path(picture) %>">Edit</a>
 		</p>
 <% end %>	
 <!-- with = t would print out more than you want -->

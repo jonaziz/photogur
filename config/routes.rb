@@ -15,10 +15,10 @@ Photogur::Application.routes.draw do
   # get 'pictures/:id' => 'pictures#show'
 
 
-  root :to => 'pictures#index'
+  
   resources :pictures
 
-
+  root :to => 'pictures#index'
 
 
 
