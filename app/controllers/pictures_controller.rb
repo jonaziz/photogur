@@ -41,7 +41,11 @@ class PicturesController < ApplicationController
 
 		# This new way treats picture as a hash
 
-		if Picture.create!(params[:picture])
+
+		# Create was added before, but will always create a new object
+		# so it will always be true.
+		@picture = Picture.new(params[:picture])
+		if @picture.save
 			# Equivalent to '/picture'.
 			# Redirect_to utilizes a "GET", so we go to index.
 			redirect_to pictures_path
