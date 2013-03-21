@@ -4,14 +4,22 @@ Photogur::Application.routes.draw do
   # Post sends infromation to the server instead of just getting
   # information.  
 
-  get 'pictures' => 'pictures#index'
+  # get 'pictures' => 'pictures#index'
+  # #get '/' => 'pictures#index'
 
-  get 'pictures/:id/edit' => 'pictures#edit'
-  get 'pictures/new' => 'pictures#new'
-  post 'pictures' => 'pictures#create'
-  post 'pictures/:id' => 'pictures#update'
+  # get 'pictures/:id/edit' => 'pictures#edit'
+  # get 'pictures/new' => 'pictures#new'
+  # post 'pictures' => 'pictures#create'
+  # post 'pictures/:id' => 'pictures#update'
 
-  get 'pictures/:id' => 'pictures#show'
+  # get 'pictures/:id' => 'pictures#show'
+
+
+  root :to => 'pictures#index'
+  resources :pictures
+
+
+
 
 
   # grabs anything after the slash and labels it as id

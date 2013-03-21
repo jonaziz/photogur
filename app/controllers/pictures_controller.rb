@@ -11,6 +11,7 @@ class PicturesController < ApplicationController
 	end
 
 	def new
+		@picture = Picture.new	
 	end
 
 	def create
@@ -18,22 +19,29 @@ class PicturesController < ApplicationController
 		# For example, we take id on a get to use below. This time
 		# we're getting params from form submit.
 		
-		# Creating an instance of picture
-		@picture = Picture.new
+		# # Creating an instance of picture
+		# @picture = Picture.new
 
-		# Taking parameters from form and adding to the picture
-		# instance created for this 'create' event.
-		@picture.url = params[:url]
-		@picture.artist = params[:artist]
-		@picture.title = params[:title]
+		# # Taking parameters from form and adding to the picture
+		# # instance created for this 'create' event.
+		# @picture.url = params[:url]
+		# @picture.artist = params[:artist]
+		# @picture.title = params[:title]
 
-		# Set variable equal to save to DB action done on the
-		# instance used in this 'create' event/
-		success = @picture.save
+		# # Changed from old style to use create.
+		# # Solution 2 
+		# @picture = Picture.create!(params[:picture])
+
+		# # Set variable equal to save to DB action done on the
+		# # instance used in this 'create' event/
+		# success = @picture.save
 
 		# Checked to make sure it saved and redirected back
 		# to the homepage.
-		if success
+
+		# This new way treats picture as a hash
+
+		if Picture.create!(params[:picture])
 			# Equivalent to '/picture'.
 			# Redirect_to utilizes a "GET", so we go to index.
 			redirect_to pictures_path
