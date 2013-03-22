@@ -27,4 +27,7 @@ class Picture < ActiveRecord::Base
     }
   }
 
+  scope :alphabetical, order("title ASC")
+  scope :free, where(:copyrighted => false)
+
 end

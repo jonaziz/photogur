@@ -10,6 +10,6 @@
 	<h4><%= @picture.artist %></h4>
 
 	<%= link_to picture_path(@picture) do %>
-		<img src="<%= @picture.url %>">
+		<%= image_tag @picture.url %>
 	<% end %>
 </div>

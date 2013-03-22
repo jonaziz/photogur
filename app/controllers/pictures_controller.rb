@@ -6,9 +6,9 @@ class PicturesController < ApplicationController
 	def index
 		# Loading all pictures only where needed (index)
 		if params[:free] == "yes"
-			@pictures = Picture.where(:copyrighted => false).all
+			@pictures = Picture.free.alphabetical.all
 		else
-			@pictures = Picture.all
+			@pictures = Picture.alphabetical.all
 		end
 	end
 

@@ -9,6 +9,9 @@
 <body>
 	<nav>
 		<%= link_to "Show me a picture!", picture_path(Picture.all.sample)%>
+		<%= link_to " | Free pictures only", pictures_path(:free => "yes") %>
+		<%= link_to " | Home", pictures_path %>
+
 	</nav>
 
 	<%= yield %>

@@ -81,15 +81,18 @@ nav a {
 	margin: 0 auto;
 }
 
+.imageframe {
+	position: relative;	
+}
+
 .copyrighted {
 	padding: 8px;
 	color: white;
 	background: orange;
-	position: relative;
+	position: absolute;
 	z-index: 3;
 	top: 5px;
 	right: 5px;
-	float: right;
 	width: 120px;
 	border-radius: 3px;
 	font-size: 10px;

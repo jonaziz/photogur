@@ -27,9 +27,11 @@
 				</div>
 				<div class="clear"></div>
 				<% end %>
-				<%= link_to picture_path(picture) do %>
-					<div class="image"><img src="<%= picture.url %>"></div>
-				<% end %>
+				<div class="image">
+					<%= link_to picture_path(picture) do %>
+					<%= image_tag picture.url %>
+					<% end %>
+				</div>
 			</div>
 		</div>
 <% end %>	
