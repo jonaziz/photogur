@@ -5,24 +5,9 @@
 	</ul>
 </div>
 
-<h1>Edit picture (ID <%= @picture.id %>)</h1>
+<div class="display">
+	<h1>Edit picture (ID <%= @picture.id %>)</h1>
 
-<%= form_for @picture do |f| %>
-	<p>
-		<label>Title</label><br>
-		<%= f.text_field "title" %>
-	</p>
-	<p>
-		<label>Artist</label><br>
-		<%= f.text_field "artist" %>
-	</p>
-	<p>
-		<label>URL</label><br>
-		<%= f.text_field "url" %>
-	</p>
-	<p>
-		<%= f.submit "Update" %>
-		<%= button_to "Delete", picture_path(@picture), :method => :delete, :confirm => "Are you sure?" %>
-	</p>
-
-<% end %>
+	<%= render :partial => "form" %>
+	<%= button_to "Delete", picture_path(@picture), :method => :delete, :confirm => "Are you sure?" %>
+</div>

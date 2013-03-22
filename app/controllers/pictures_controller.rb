@@ -44,6 +44,11 @@ class PicturesController < ApplicationController
 			redirect_to @picture
 			# We're passing picture and redirect_to method looks for
 			# an ID.
+		else
+			# There was an error on the form.
+			flash.now[:error] = "Specified fields cannot be blank."
+
+			render :edit
 		end
 	end
 

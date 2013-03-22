@@ -22,8 +22,8 @@ Picture.create(
 )
 
 Picture.create(
-	:artist => 'Stephen Scullion'
-	:title => "Sea Power"
+	:artist => 'Stephen Scullion',
+	:title => "Sea Power",
 	:url => "http://monicao.s3.amazonaws.com/bitmaker/wave.jpg"
 )
 Picture.create(
