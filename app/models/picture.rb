@@ -11,7 +11,19 @@ class Picture < ActiveRecord::Base
   # list as in below example. Note: different from attr_accessor
 
   attr_accessible :title, :artist, :url
-  validates :title, :presence => true
-  validates :url, 	:presence => true
+  validates :title, :presence => {
+    :message => "You must enter a photo title"
+  }
+  # presence validation is not needed on the URL because the RegExp would
+  # capture that it was blank, thus not starting with http.
+  validates :url,   {
+    :presence => {
+      :message => "You must enter a URL"
+      },
+    :format => {
+      :with => /^https?:/, 
+      :message => "Please enter a valid URL beginning with HTTP"
+    }
+  }
 
 end
