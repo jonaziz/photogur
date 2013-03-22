@@ -81,6 +81,21 @@ nav a {
 	margin: 0 auto;
 }
 
+.copyrighted {
+	padding: 8px;
+	color: white;
+	background: orange;
+	position: relative;
+	z-index: 3;
+	top: 5px;
+	right: 5px;
+	float: right;
+	width: 150px;
+	border-radius: 3px;
+	font-size: 10px;
+	font-weight: bold;
+}
+
 .photo-nav {
 	background: #F5F5F5;
 	text-align: right;

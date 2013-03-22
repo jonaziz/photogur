@@ -20,9 +20,17 @@
 			<div class="photo-nav">
 				<a href="<%= picture_path(picture) %>">View Photo</a> | <a href="<%= edit_picture_path(picture) %>">Edit</a>
 			</div>
+			<div class="image">
+				<% if picture.copyrighted %>
+				<div class="copyrighted">
+					Image is copyrighted by its original author.
+				</div>
+				<div class="clear"></div>
+				<% end %>
 				<%= link_to picture_path(picture) do %>
 					<img src="<%= picture.url %>">
 				<% end %>
+			</div>
 		</div>
 <% end %>	
 <!-- with = t would print out more than you want -->
