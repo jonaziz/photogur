@@ -90,10 +90,13 @@ nav a {
 	top: 5px;
 	right: 5px;
 	float: right;
-	width: 150px;
+	width: 120px;
 	border-radius: 3px;
 	font-size: 10px;
 	font-weight: bold;
+}
+.copyrighted p {
+	margin: 0;
 }
 
 .photo-nav {

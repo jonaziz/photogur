@@ -5,7 +5,11 @@ class PicturesController < ApplicationController
 	## still work. It knows the index.html exists.
 	def index
 		# Loading all pictures only where needed (index)
-		@pictures = Picture.all
+		if params[:free] == "yes"
+			@pictures = Picture.where(:copyrighted => false).all
+		else
+			@pictures = Picture.all
+		end
 	end
 
 	def new
