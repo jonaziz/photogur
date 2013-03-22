@@ -17,7 +17,12 @@ class PicturesController < ApplicationController
 		# create a new object so it will always be true.
 		@picture = Picture.new(params[:picture])
 		if @picture.save
-			redirect_to @pictures
+			redirect_to pictures_path
+		else
+			# There was an error on the form.
+			flash.now[:error] = "Specified fields cannot be blank."
+
+			render :new
 		end
 	end
 

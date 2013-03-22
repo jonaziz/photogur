@@ -1,24 +1,34 @@
 <div class="escape-nav">
-	<a href="<%= pictures_path %>">Return Home</a>
+	<ul>
+		<li><%= link_to "Return Home", pictures_path %></li>
+	</ul>
 </div>
 
-<h1>Add a picture</h1>
+<div class="display">
+	<h1>Add a picture</h1>
 
-<%= form_for @picture do |f| %>
-	<p>
-		<label>Title</label><br>
-		<%= f.text_field "title" %>
-	</p>
-	<p>
-		<label>Artist</label><br>
-		<%= f.text_field "artist" %>
-	</p>
-	<p>
-		<label>URL</label><br>
-		<%= f.text_field "url" %>
-	</p>
-	<p>
-		<%= f.submit "Save" %>
-	</p>
+	<div class="errors">
+		<%= flash[:error] %>	
+	</div>
 
-<% end %>
+	<%= form_for @picture do |f| %>
+		<p>
+			<label>Title</label><br>
+			<div class="errors"><%= @picture.errors[:title].join(", ") %></div>	
+			<%= f.text_field "title" %>	
+		</p>
+		<p>
+			<label>Artist</label><br>
+			<%= f.text_field "artist" %>
+		</p>
+		<p>
+			<label>URL</label><br>
+			<div class="errors"><%= @picture.errors[:url].join(", ") %></div>
+			<%= f.text_field "url" %>
+		</p>
+		<p>
+			<%= f.submit "Save" %>
+		</p>
+
+	<% end %>
+</div>
